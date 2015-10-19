@@ -1,20 +1,27 @@
 {
-  "name": "reanimate",
-  "version": "0.0.1",
-  "description": "React component for Anima",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "react",
-    "anima",
-    "animation"
-  ],
-  "author": "Yehor Lvivski <lvivski@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "anima": "^0.4.0",
-    "react": "^0.14.0"
-  }
+	"name": "reanimate",
+	"version": "1.0.0",
+	"description": "React component for Anima",
+	"main": "index.js",
+	"scripts": {
+		"test": "glue -j example/example.js --jsout example/bundle.js && open example/index.html",
+		"dev": "glue -w -j example/example.js --jsout example/bundle.js && open example/index.html"
+	},
+	"keywords": [
+		"react",
+		"anima",
+		"animation"
+	],
+	"author": "Yehor Lvivski <lvivski@gmail.com>",
+	"license": "MIT",
+	"dependencies": {
+		"anima": "^0.4.0",
+		"react": "^0.13.3"
+	},
+	"devDependencies": {
+		"gluten": "^1.1.2"
+	},
+	"browserify-shim": {
+		"react": "global:React"
+	}
 }

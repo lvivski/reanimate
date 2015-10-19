@@ -1,17 +1,19 @@
 import React from 'react'
 import Anima from 'anima'
 
-var world
+let world
 
 export default class Reanimate extends React.Component {
-    constructor() {
+    constructor(props) {
+        super(props)
         if (!world) {
-			world = a.world()
+			world = Anima.world()
 		}
     }
 
     componentDidMount() {
-        this.item = world.add(this.refs.element)
+        this.item = world.add(this.refs.element.getDOMNode())
+        this.item.animate(this.props.animation)
     }
 
     componentWillReceiveProps(props) {
