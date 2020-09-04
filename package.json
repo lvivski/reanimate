@@ -16,7 +16,7 @@
 	"license": "MIT",
 	"dependencies": {
 		"anima": "^0.4.0",
-		"react": "^0.13.3"
+		"react": "^16.13.1"
 	},
 	"devDependencies": {
 		"gluten": "^1.1.2"
